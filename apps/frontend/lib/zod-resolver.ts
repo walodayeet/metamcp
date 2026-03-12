@@ -5,7 +5,7 @@ import { translateZodError } from "./validation-utils";
 // Type for translation function
 type TranslationFunction = (
   key: string,
-  params?: Record<string, unknown>,
+  params?: Record<string, string | number>,
 ) => string;
 
 /**

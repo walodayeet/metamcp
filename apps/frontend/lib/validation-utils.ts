@@ -3,7 +3,7 @@ import { ZodError, ZodIssue } from "zod";
 // Type for translation function
 type TranslationFunction = (
   key: string,
-  params?: Record<string, unknown>,
+  params?: Record<string, string | number>,
 ) => string;
 
 // Map of Zod issue codes to translation keys
