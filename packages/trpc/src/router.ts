@@ -1,5 +1,5 @@
-import { createFrontendRouter } from "./routers/frontend";
-import { router } from "./trpc";
+import { createFrontendRouter } from "./routers/frontend/index.js";
+import { router } from "./trpc.js";
 
 export const createAppRouter = (implementations: {
   frontend: Parameters<typeof createFrontendRouter>[0];
@@ -23,5 +23,5 @@ export const createAppRouter = (implementations: {
 export type AppRouter = ReturnType<typeof createAppRouter>;
 
 // Export types for the router
-export type { BaseContext } from "./trpc";
-export { createFrontendRouter } from "./routers/frontend";
+export type { BaseContext } from "./trpc.js";
+export { createFrontendRouter } from "./routers/frontend/index.js";

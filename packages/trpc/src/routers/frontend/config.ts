@@ -1,7 +1,7 @@
 import { SetConfigRequest, SetConfigRequestSchema } from "@repo/zod-types";
 import { z } from "zod";
 
-import { protectedProcedure, publicProcedure, router } from "../../trpc";
+import { protectedProcedure, publicProcedure, router } from "../../trpc.js";
 
 export const createConfigRouter = (implementations: {
   getSignupDisabled: () => Promise<boolean>;

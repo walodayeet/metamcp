@@ -9,7 +9,7 @@ import {
 } from "@repo/zod-types";
 import { z } from "zod";
 
-import { protectedProcedure, router } from "../../trpc";
+import { protectedProcedure, router } from "../../trpc.js";
 
 // Define the endpoints router with procedure definitions
 // The actual implementation will be provided by the backend

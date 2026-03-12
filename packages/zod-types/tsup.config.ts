@@ -8,9 +8,14 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   splitting: false,
-  bundle: true, // Bundle to resolve imports properly
+  bundle: true,
   keepNames: true,
   minify: false,
-  dts: true, // Generate TypeScript declaration files
+  dts: true,
+  outExtension() {
+    return {
+      js: ".js",
+    };
+  },
   external: ["zod"],
 });
