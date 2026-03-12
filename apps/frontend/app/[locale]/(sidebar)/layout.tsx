@@ -95,7 +95,11 @@ function LiveLogsMenuItem() {
 
 function UserInfoFooter() {
   const { t } = useTranslations();
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<{
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
+  } | null>(null);
 
   // Get user info
   useEffect(() => {

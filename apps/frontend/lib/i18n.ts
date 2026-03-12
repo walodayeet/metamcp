@@ -10,18 +10,18 @@ export const LOCALE_NAMES = {
 
 // Type for translations
 export type Translations = {
-  common: Record<string, any>;
-  auth: Record<string, any>;
-  navigation: Record<string, any>;
-  "mcp-servers": Record<string, any>;
-  namespaces: Record<string, any>;
-  endpoints: Record<string, any>;
-  "api-keys": Record<string, any>;
-  settings: Record<string, any>;
-  search: Record<string, any>;
-  inspector: Record<string, any>;
-  logs: Record<string, any>;
-  validation: Record<string, any>;
+  common: Record<string, unknown>;
+  auth: Record<string, unknown>;
+  navigation: Record<string, unknown>;
+  "mcp-servers": Record<string, unknown>;
+  namespaces: Record<string, unknown>;
+  endpoints: Record<string, unknown>;
+  "api-keys": Record<string, unknown>;
+  settings: Record<string, unknown>;
+  search: Record<string, unknown>;
+  inspector: Record<string, unknown>;
+  logs: Record<string, unknown>;
+  validation: Record<string, unknown>;
 };
 
 // Utility functions for working with localized paths
@@ -211,7 +211,7 @@ export function getTranslation(
   params?: Record<string, string | number>,
 ): string {
   const parts = key.split(":");
-  let value: any = dictionary;
+  let value: unknown = dictionary;
 
   // First, navigate to the correct namespace (before the colon)
   if (parts.length > 1) {
