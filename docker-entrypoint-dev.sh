@@ -14,6 +14,8 @@ echo "📦 Installing dependencies..."
 pnpm install --frozen-lockfile=false
 
 echo "🏗️ Building workspace packages..."
+echo "🧹 Cleaning Next.js cache..."
+rm -rf apps/frontend/.next
 pnpm build
 
 echo "🛠 Running migrations..."
