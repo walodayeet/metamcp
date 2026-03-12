@@ -6,7 +6,7 @@ import {
 } from "@repo/zod-types";
 import { z } from "zod";
 
-import { protectedProcedure, router } from "../../trpc.js";
+import { protectedProcedure, router } from "../../trpc../";
 
 // Define the OAuth router with procedure definitions
 // The actual implementation will be provided by the backend

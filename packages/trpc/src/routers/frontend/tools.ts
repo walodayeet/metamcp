@@ -3,7 +3,7 @@ import {
   GetToolsByMcpServerUuidRequestSchema,
 } from "@repo/zod-types";
 
-import { protectedProcedure, router } from "../../trpc.js";
+import { protectedProcedure, router } from "../../trpc../";
 
 export const createToolsRouter = <
   TImplementations extends {

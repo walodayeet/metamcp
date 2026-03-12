@@ -11,7 +11,7 @@ import {
 } from "@repo/zod-types";
 import { z } from "zod";
 
-import { protectedProcedure, router } from "../../trpc.js";
+import { protectedProcedure, router } from "../../trpc../";
 
 export const createApiKeysRouter = (implementations: {
   create: (

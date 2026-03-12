@@ -1,11 +1,11 @@
-import { createApiKeysRouter } from "./api-keys.js";
-import { createConfigRouter } from "./config.js";
-import { createEndpointsRouter } from "./endpoints.js";
-import { createLogsRouter } from "./logs.js";
-import { createMcpServersRouter } from "./mcp-servers.js";
-import { createNamespacesRouter } from "./namespaces.js";
-import { createOAuthRouter } from "./oauth.js";
-import { createToolsRouter } from "./tools.js";
+import { createApiKeysRouter } from "./api-keys./";
+import { createConfigRouter } from "./config./";
+import { createEndpointsRouter } from "./endpoints./";
+import { createLogsRouter } from "./logs./";
+import { createMcpServersRouter } from "./mcp-servers./";
+import { createNamespacesRouter } from "./namespaces./";
+import { createOAuthRouter } from "./oauth./";
+import { createToolsRouter } from "./tools./";
 
 export { createMcpServersRouter };
 export { createNamespacesRouter };

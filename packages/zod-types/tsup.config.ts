@@ -12,10 +12,5 @@ export default defineConfig({
   keepNames: true,
   minify: false,
   dts: true,
-  outExtension() {
-    return {
-      js: ".js",
-    };
-  },
   external: ["zod"],
 });

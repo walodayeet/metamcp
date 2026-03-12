@@ -5,12 +5,12 @@ export {
   router,
   baseProcedure,
   createTRPCRouter,
-} from "./trpc.js";
-export type { BaseContext } from "./trpc.js";
+} from "./trpc./";
+export type { BaseContext } from "./trpc./";
 
 // Export router creators
-export { createAppRouter, createFrontendRouter } from "./router.js";
-export { createMcpServersRouter } from "./routers/frontend/index.js";
+export { createAppRouter, createFrontendRouter } from "./router./";
+export { createMcpServersRouter } from "./routers/frontend/index./";
 
 // Export all zod types for convenience
 export * from "@repo/zod-types";
