@@ -11,7 +11,7 @@ services:
       - "12009:12009"
     volumes:
       # Mount source code for hot reloading
-      - .:/app
+      - /data/metamcp/:/app
       - /app/node_modules
       - /app/apps/frontend/node_modules
       - /app/apps/backend/node_modules
