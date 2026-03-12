@@ -47,6 +47,8 @@ pnpm install
 echo "🏗️ Building workspace packages..."
 pnpm build
 
+echo "🔍 Verifying zod-types build output:"\nls -R packages/zod-types/dist
+
 # Run database migrations for development
 echo "🛠 Running database migrations (dev)..."
 (
