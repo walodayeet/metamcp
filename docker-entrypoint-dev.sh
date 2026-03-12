@@ -11,7 +11,7 @@ cleanup() {
 trap cleanup TERM INT EXIT
 
 echo "📦 Installing dependencies..."
-pnpm install
+pnpm install --frozen-lockfile=false
 
 echo "🏗️ Building workspace packages..."
 pnpm build
