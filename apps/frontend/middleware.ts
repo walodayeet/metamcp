@@ -124,9 +124,17 @@ export async function middleware(request: NextRequest) {
   }
 }
 
+
+
+
 export const config = {
   matcher: [
-    // Skip all internal paths (_next, etc.)
-    "/((?!_next|api/|trpc|mcp-proxy|metamcp|oauth|fe-oauth|\\.well-known|service|health|.*\\..*).*)",
+    "/((?!_next|api/|trpc|mcp-proxy|metamcp|oauth|fe-oauth|\.well-known|service|health|.*\..*).*)",
+  ],
+  unstable_allowDynamic: [
+    "**/node_modules/better-auth/**",
+    "**/node_modules/@better-fetch/fetch/**",
+    "**/node_modules/lodash/**",
+    "**/node_modules/.pnpm/**",
   ],
 };
