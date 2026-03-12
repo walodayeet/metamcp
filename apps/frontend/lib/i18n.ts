@@ -22,6 +22,7 @@ export type Translations = {
   inspector: Record<string, unknown>;
   logs: Record<string, unknown>;
   validation: Record<string, unknown>;
+  [key: string]: Record<string, unknown> | undefined;
 };
 
 // Utility functions for working with localized paths
@@ -208,7 +209,7 @@ export async function loadTranslations(
 export function getTranslation(
   dictionary: Translations,
   key: string,
-  params?: Record<string, string | number>,
+  params?: Record<string, string | number | bigint>,
 ): string {
   const parts = key.split(":");
   let value: unknown = dictionary;
@@ -217,7 +218,7 @@ export function getTranslation(
   if (parts.length > 1) {
     const namespace = parts[0]!;
     if (value && typeof value === "object" && namespace in value) {
-      value = value[namespace];
+      value = (value as Record<string, unknown>)[namespace];
     } else {
       return key; // Return the key if namespace not found
     }
@@ -226,7 +227,7 @@ export function getTranslation(
     const nestedKeys = parts[1]!.split(".");
     for (const k of nestedKeys) {
       if (value && typeof value === "object" && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         return key; // Return the key if translation not found
       }
@@ -236,7 +237,7 @@ export function getTranslation(
     const keys = key.split(".");
     for (const k of keys) {
       if (value && typeof value === "object" && k in value) {
-        value = value[k];
+        value = (value as Record<string, unknown>)[k];
       } else {
         return key; // Return the key if translation not found
       }

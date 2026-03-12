@@ -16,7 +16,7 @@ export function useTranslations() {
       .finally(() => setIsLoading(false));
   }, [locale]);
 
-  const t = (key: string, params?: Record<string, string | number>) => {
+  const t = (key: string, params?: Record<string, string | number | bigint>) => {
     if (!translations) return key;
     return getTranslation(translations, key, params);
   };
